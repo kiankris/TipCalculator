@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <h1>Tip Calculator</h1>
-<p class="<?php echo ($stotal_error != "") ? "error" : "";?>">Bill subtotal: $ <input type="text" name="subtotal" value="<?php echo $subtotal;?>"></p>
-<p class="<?php echo ($percentage_error != "") ? "error" : "";?>">Tip percentage: </p>
+<p class="<?php echo ($stotal_error) ? "error" : "";?>">Bill subtotal: $ <input type="text" name="subtotal" value="<?php echo $subtotal;?>"></p>
+<p class="<?php echo ($percentage_error) ? "error" : "";?>">Tip percentage: </p>
 
 
 <?php 
