@@ -16,8 +16,7 @@
 <?php 
 $subtotal = $custom_percentage = '';
 $percentage = $tip = $total = 0;
-$subtotal_format = $set = $cust_perc_format = false;
-$stotal_error = $cust_perc_err = $percentage_error = '';
+$subtotal_format = $set = $cust_perc_format = $stotal_error = $percentage_error = false;
 function calculatePercentage($value='')
 {
 	$value = (float) $value / 100;
@@ -45,12 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$set = true;
 		}
 		else{
-			$percentage_error = "Please choose a percentage";
-			$cust_perc_err = "</br> or enter a custom percentage";
+			$percentage_error = true;
 		}
 	}
 	else{
-		$stotal_error = "Incorrect number format";
+		$stotal_error = true;
 	}
 }
 ?>
