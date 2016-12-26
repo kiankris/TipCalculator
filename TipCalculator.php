@@ -29,7 +29,7 @@ function calculatePercentage($value='')
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$subtotal_format = preg_match('/^[0-9]+(?:\.[0-9]{0,2})?$/', $_POST["subtotal"]);
-	$cust_perc_format = preg_match('/^[0-9]+(?:\.[0-9]{0,2})?$/', $_POST["custom_percentage"]);
+	$cust_perc_format = preg_match('/^[+]?([.]\d+|\d+[.]?\d*)$/', $_POST["custom_percentage"]);
 
 	if ($subtotal_format){
 		if(!empty($_POST["percentage"])){
