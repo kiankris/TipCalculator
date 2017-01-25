@@ -2,10 +2,10 @@
 <html>
 <head>
 <link rel="stylesheet" href="styles.css">
-<style type="text/css">
-	.error{
-	color: red;
-	font-weight: bold;
+<style type="text/css">.error
+{
+color: red;
+font-weight: bold;
 }
 .okay{
 	color: blue;
